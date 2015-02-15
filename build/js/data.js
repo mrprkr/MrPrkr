@@ -3,6 +3,7 @@
 var projects = [
 	{
 		"id": "98ffad28f33e4718b883c81f1bf48523",
+		"publish": true,
 		"link": "surfingaustralia",
 		"name": "SA.com Website Redesign",
 		"tags": [
@@ -21,6 +22,7 @@ var projects = [
 	},
 	{
 		"id": "c0ff01aa45f7468c9b763663cf65699a",
+		"publish": false,
 		"link": "articular",
 		"name": "Articular Design Repository",
 		"tags": [
@@ -40,6 +42,7 @@ var projects = [
 	},
 	{
 		"id": "2a0cbdb3fe4d4176990235d14802ab28",
+		"publish": false,
 		"link": "telstra-magazine",
 		"name": "Telstra Magazine",
 		"tags": [
@@ -57,6 +60,7 @@ var projects = [
 	},
 	{
 		"id": "abb1ae6a15414a32aee51e4ad95eb2b3",
+		"publish": false,
 		"link": "onthehouse",
 		"name": "OTH Service Design",
 		"tags": [
@@ -75,6 +79,7 @@ var projects = [
 	},
 	{
 		"id": "9c689fcc555e44f6ae55a54545cac0b9",
+		"publish": false,
 		"link": "telstra-cec",
 		"name": "Customer Experience Center",
 		"tags": [
@@ -94,6 +99,7 @@ var projects = [
 	},
 	{
 		"id": "8068c70b0ec74df79bf2c1100de250ef",
+		"publish": false,
 		"link": "ID14",
 		"name": "ID14 Graduate Showcase",
 		"tags": 
@@ -114,6 +120,7 @@ var projects = [
 	},
 	{
 		"id": "2bc4dc313d394bddbe4b93bbadddfa74",
+		"publish": false,
 		"link": "telstra-mac",
 		"name": "Telstra MAC",
 		"tags": [
@@ -131,6 +138,7 @@ var projects = [
 	},
 	{
 		"id": "0e3224fc265f4c3397011c4d4c30f463",
+		"publish": false,
 		"link": "dias",
 		"name": "DIAS",
 		"tags": [
@@ -148,6 +156,7 @@ var projects = [
 	},
 	{
 		"id": "0dfaaf61d28e4c179a87a181f82d05fd",
+		"publish": false,
 		"link": "radar",
 		"name": "RADAR",
 		"tags": [
@@ -165,6 +174,7 @@ var projects = [
 	},
 	{
 		"id": "c75f8c4df5b64cdeb8c9612b5a037553",
+		"publish": false,
 		"link": "processing",
 		"name": "Processing",
 		"tags": [

@@ -9,28 +9,23 @@ app.config(['$routeProvider', '$locationProvider',
 		$routeProvider
 
 			.when('/', {
-				templateUrl: 'home.html',
+				redirectTo: '/projects'
+				// templateUrl: 'home.html',
+				// controller: 'main-controller'
+			})
+
+			.when('/projects', {
+				templateUrl: 'projects.html',
 				controller: 'main-controller'
 			})
 
-			.when('/view1', {
-				templateUrl: 'view1.html',
-				controller: 'main-controller'
+			.when('/project/:id', {
+				templateUrl: 'project-template.html',
+				controller: 'project-controller'
 			})
 
-			.when('/view2', {
-				templateUrl: 'view2.html',
-				controller: 'main-controller'
-			})
-
-			.when('/view3/:id', {
-				templateUrl: 'view3.html',
-				controller: 'view3-controller'
-			})
-
-			.when('/view3', {
-				templateUrl: 'view3.html',
-				controller: 'view3-controller'
+			.when('/project', {
+				redirectTo: '/projects'
 			})
 
 			.otherwise({
@@ -72,6 +67,6 @@ app.controller('main-controller', function($scope, $window, $timeout, $rootScope
 
 });
 
-app.controller('view3-controller', function($scope, $routeParams){
+app.controller('project-controller', function($scope, $routeParams){
 	$scope.routeId = $routeParams.id;
 })
