@@ -34,7 +34,7 @@ app.config(['$routeProvider', '$locationProvider',
 			})
 
 			.otherwise({
-				redirectTo: '/#'
+				redirectTo: '/#/'
 			});
 
 		$locationProvider.html5Mode(false);
@@ -43,7 +43,6 @@ app.config(['$routeProvider', '$locationProvider',
 //The main controller
 app.controller('main-controller', function($scope, $window, $timeout, $rootScope){
 	$scope.projects = projects;
-	$scope.imagesAreLoaded = false;
 	
 	/* Reloads masonry after window resize
 	delayed to use CSS animation
@@ -52,15 +51,10 @@ app.controller('main-controller', function($scope, $window, $timeout, $rootScope
 		$timeout(function () {
 			$rootScope.$broadcast('masonry.reload');
 		}, 600);
-	}
-
-	// var w = angular.element($window);   //watches the window
-	// 	w.bind('resize', function () {
-	// 	$scope.reloadMasonry();
-	// });
-		
+	}		
 
 	//detect when images are still loading
+	$scope.imagesAreLoaded = false;
 	$scope.imgLoadedEvents = {
 				always: function(instance) {
 						// Do stuff

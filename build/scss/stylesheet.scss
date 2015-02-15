@@ -5,6 +5,7 @@
 @import './partials/reset';
 @import './partials/fonts';
 @import './partials/colors';
+@import './partials/animate';
 
 /* =======================================================
 	GLOBAL STYLES
@@ -19,27 +20,25 @@
 	min-height: 300px;
 }
 
-nav {
-	padding: 10px;
-	margin-bottom: 20px;
-	& a {
-		color: $mid-grey;
-		text-decoration: none;
-		margin-right: 15px;
-		&:hover {
-			color: $bright-blue;
-			border-bottom: 2px solid $bright-blue;
-		}
+
+.title {
+	text-align: center;
+	margin: {
+		top: 40px;
+		bottom:20px;
+	}
+	& h1{
+		font-weight: 100;
+		font-size: 36px;
 	}
 }
 
+
 a {
-	color: $mid-grey;
+	color: #ff1d8e;
 	text-decoration: none;
-	margin-right: 15px;
 	&:hover {
-		color: $bright-blue;
-		border-bottom: 2px solid $bright-blue;
+		border-bottom: 2px solid #ff1d8e;
 	}
 }
 
@@ -57,20 +56,17 @@ hr {
 }
 
 footer {
-	margin-top: 40px;
+	margin: 40px;
+	text-align: center;
 }
 
-.title {
-	text-align: center;
-	margin: 22px;
-}
+
 
 .loader {
 	text-align: center;
 }
 .masonry {
   background: #EEE;
-  // width: 1020px;
   // max-width: 640px;
 }
 
@@ -96,7 +92,6 @@ footer {
 .brick-text {
 	padding: 20px;
 	& a {
-		color: #ff1d8e;
 		font-weight: bold;
 		text-transform: uppercase;
 	}
@@ -112,7 +107,7 @@ footer {
 
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 960px){
 	//styles for iPad/tablet portrait
 
 	.masonry-brick {
@@ -123,8 +118,16 @@ footer {
 
 }
 
-@media screen and (max-width: 540px){
+@media screen and (max-width: 700px){
 	//styles for large phone
+	.masonry-container{
+		padding: 0px;
+	}
+	.masonry-brick {
+		width: 100%;
+		padding: 20px;
+		margin-bottom: 40px; 
+	}
 
 }
 

@@ -1,10 +1,5 @@
-<div class="title">
-	<h1>MR PRKR</h1>
-	<hr/>
-</div>
-
-<div ng-hide="imagesAreLoaded" class="loader">Loading...</div>
-<div ng-show="imagesAreLoaded" masonry class="masonry-container" id="projects-masonry">
+<div ng-hide="imagesAreLoaded" class="loader fadeout">Loading Projects...</div>
+<div ng-show="imagesAreLoaded" masonry class="masonry-container fadein" id="projects-masonry">
 	  <div ng-repeat="project in projects" class="masonry-brick">
 		  <div class="brick-contents">
 		    <img ng-src="{{project.images[0].url}}" images-loaded="imgLoadedEvents">
@@ -12,7 +7,7 @@
 		    	<h4>{{project.name}}</h4>
 		    	<p>{{project.synopsis}}</p>
 			  	<br/>
-			  	<p><a href="#">Coming Soon</a></p>
+			  	<p><a href="#/">Coming Soon</a></p>
 		    </div>
 		  </div>
 	  </div>

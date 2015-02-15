@@ -1,3 +1,6 @@
 // FONTS PARTIAL FILE FOR DEFINING VARIABLES
+@import url("http://fonts.googleapis.com/css?family=Raleway:500,700,300");
 
-$title-font: 'Adelle';
+* {
+	font-family: Raleway, Helvetica, sans-serif;
+}
