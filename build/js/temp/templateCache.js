@@ -1,0 +1,4 @@
+angular.module("templatescache", []).run(["$templateCache", function($templateCache) {$templateCache.put("home.html","<h1>portfolio </h1>\n<br/>\n<div masonry class=\"masonry-container\">\n	  <div ng-repeat=\"project in projects\" class=\"masonry-brick\">\n	  <div class=\"brick-contents\">\n	    <img ng-src=\"{{project.images[0].url}}\">\n	  	<p>{{project.name}}<p>\n	  	<br/>\n	  	<a href=\"#\">OPEN</a>\n	  </div>\n\n	  </div>\n</div>");
+$templateCache.put("view1.html","<h1> This is view 1 </h1>");
+$templateCache.put("view2.html","<h1>This is view 2 </h1>");
+$templateCache.put("view3.html","<h1> View 3 </h1>\n<p> The route params are: {{routeId}}</p>");}]);

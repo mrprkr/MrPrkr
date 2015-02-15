@@ -1,0 +1,13 @@
+<h1>portfolio </h1>
+<br/>
+<div masonry class="masonry-container">
+	  <div ng-repeat="project in projects" class="masonry-brick">
+	  <div class="brick-contents">
+	    <img ng-src="{{project.images[0].url}}">
+	  	<p>{{project.name}}<p>
+	  	<br/>
+	  	<a href="#">OPEN</a>
+	  </div>
+
+	  </div>
+</div>

@@ -1,0 +1,141 @@
+/* =======================================================
+	IMPORTS - BYO sass
+======================================================= */
+
+@import './partials/reset';
+@import './partials/fonts';
+@import './partials/colors';
+
+/* =======================================================
+	GLOBAL STYLES
+======================================================= */
+
+.global-content-container {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.ng-view {
+	min-height: 300px;
+}
+
+nav {
+	padding: 10px;
+	margin-bottom: 20px;
+	& a {
+		color: $mid-grey;
+		text-decoration: none;
+		margin-right: 15px;
+		&:hover {
+			color: $bright-blue;
+			border-bottom: 2px solid $bright-blue;
+		}
+	}
+}
+
+a {
+	color: $mid-grey;
+	text-decoration: none;
+	margin-right: 15px;
+	&:hover {
+		color: $bright-blue;
+		border-bottom: 2px solid $bright-blue;
+	}
+}
+
+p {
+	margin-top: 0.2rem;
+	font-size: 13px;
+	line-height: 1.2rem;
+}
+
+hr {
+	margin:{
+		top: 20px;
+		bottom: 20px;
+	}
+}
+
+footer {
+	margin-top: 40px;
+}
+
+
+
+.masonry {
+  background: #EEE;
+  // width: 1020px;
+  // max-width: 640px;
+}
+
+.masonry-container{
+	display: block;
+	padding: 2px;
+	// background-color: blue;
+}
+
+.masonry-brick {
+  width: 340px;
+  padding: 20px;
+}
+
+.brick-contents {
+	display: block;
+  	background: #f8f8f8;
+  	border-color: hsla(0, 0%, 0%, 0.5);
+  	& img {
+	  	width: 100%;
+	  }
+}
+
+
+/* =======================================================
+	BREAKPOINTS
+======================================================= */
+
+@media screen and (max-width: 1024px){
+	//styles for laptop/tablet landscape
+
+}
+
+@media screen and (max-width: 768px){
+	//styles for iPad/tablet portrait
+
+	.masonry-container {
+		padding: 0;
+	}
+
+	.masonry {
+		// width: 768px;
+	}
+
+	.masonry-brick {
+		width: 384px;
+		padding: 20px;
+		// transition: width 0.4s;
+	}
+
+}
+
+@media screen and (max-width: 540px){
+	//styles for large phone
+
+}
+
+@media screen and (max-width: 480px){
+	//styles for medium phone
+
+}
+
+@media screen and (max-width: 320px){
+	//styles for small phone
+
+}
+
+@media screen and (max-width: 250px){
+	//styles for rediculously small phone
+
+}
+
+//=======================================================
+
