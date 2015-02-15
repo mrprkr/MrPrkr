@@ -60,8 +60,14 @@ footer {
 	margin-top: 40px;
 }
 
+.title {
+	text-align: center;
+	margin: 22px;
+}
 
-
+.loader {
+	text-align: center;
+}
 .masonry {
   background: #EEE;
   // width: 1020px;
@@ -87,6 +93,14 @@ footer {
 	  	width: 100%;
 	  }
 }
+.brick-text {
+	padding: 20px;
+	& a {
+		color: #ff1d8e;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+}
 
 
 /* =======================================================
@@ -101,17 +115,9 @@ footer {
 @media screen and (max-width: 768px){
 	//styles for iPad/tablet portrait
 
-	.masonry-container {
-		padding: 0;
-	}
-
-	.masonry {
-		// width: 768px;
-	}
-
 	.masonry-brick {
-		width: 384px;
-		padding: 20px;
+		width: 380px;
+		// padding: 20px;
 		// transition: width 0.4s;
 	}
 
