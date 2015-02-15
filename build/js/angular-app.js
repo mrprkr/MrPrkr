@@ -1,6 +1,6 @@
 
 //Define angular app
-var app = angular.module('app', ['templatescache', 'ngRoute', 'ngAnimate', 'wu.masonry', 'angular-images-loaded'])
+var app = angular.module('app', ['templatescache', 'ngRoute', 'ngAnimate', 'wu.masonry', 'angular-images-loaded', 'ngTouch'])
 
 //configure application routes, 
 //note: this is using gulp-angular-template-cache so only template names are needed
@@ -67,6 +67,35 @@ app.controller('main-controller', function($scope, $window, $timeout, $rootScope
 
 });
 
-app.controller('project-controller', function($scope, $routeParams){
-	$scope.routeId = $routeParams.id;
+app.controller('project-controller', function($scope, $routeParams, $sce){
+	$scope.projects = projects;
+	for(x in $scope.projects){
+		if($scope.projects[x].link === $routeParams.id){
+			$scope.projectLoaded = $scope.projects[x];
+		}
+	};
+
+	$scope.toTrusted = function(html){
+		return $sce.trustAsHtml(html);
+	}
+
+	$scope.currentIndex = 0;
+	$scope.images = $scope.projectLoaded.images;
+	
+	$scope.setCurrentIndex = function(index){
+		$scope.currentIndex = index;
+	};
+
+	$scope.isCurrentIndex = function(index){
+		return $scope.currentIndex === index;
+	};
+
+	$scope.showNext = function(){
+		$scope.currentIndex = ($scope.currentIndex < $scope.images.length - 1) ? ++$scope.currentIndex : 0;
+	};
+	$scope.showPrevious = function(){
+		$scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : $scope.images.length -1;
+	};
+
+
 })

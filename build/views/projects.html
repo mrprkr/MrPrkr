@@ -4,14 +4,17 @@
 <div ng-show="imagesAreLoaded" masonry class="masonry-container fadein" id="projects-masonry">
 	  <div ng-repeat="project in projects" class="masonry-brick">
 		  <div class="brick-contents">
+
 		    <img ng-src="{{project.images[0].url}}" images-loaded="imgLoadedEvents">
 		    <div class="brick-text">
 		    	<h4>{{project.name}}</h4>
+		    	<p class="client">{{project.client}}</p>
 		    	<p>{{project.synopsis}}</p>
 			  	<br/>
-			  	<p ng-show="{{project.publish}}"><a ng-href="#/project/{{project.link}}">Open Project</a></p>
+			  	<p ng-show="{{project.publish}}"><a ng-href="#/project/{{project.link}}">view Project</a></p>
 			  	<p ng-hide="{{project.publish}}">AVALIABLE SOON</p>
 		    </div>
 		  </div>
 	  </div>
 </div>
+

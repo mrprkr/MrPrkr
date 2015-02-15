@@ -69,6 +69,7 @@ gulp.task('watch', function(){
         ['./build/html/*.html',
         './build/js/*.js',
         './build/scss/**/*.scss',
+        './build/scss/partials/*.scss',
         './build/views/*.html',
         './build/assets/**/*',
         './bower_components'],

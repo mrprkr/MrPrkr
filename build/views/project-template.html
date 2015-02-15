@@ -1,2 +1,34 @@
-<h1> View 3 </h1>
-<p> The route params are: {{routeId}}</p>
+<div class="back-all-projects">
+	<a href="#/projects">back to all projects </a>
+</div>
+
+<div ng-include=" 'global-nav.html' "></div>
+
+
+<div class="project-container">
+
+	<div class="gallery-container" ng-style="galleryStyle">
+		<div class="gallery-image">
+			<img ng-hide="!isCurrentIndex($index)" ng-repeat="image in projectLoaded.images"  ng-src="{{image.url}}" ng-click="showNext()" ng-swipe-left="showNext()" ng-swipe-right="showPrevious()" width="100%">
+		</div>
+		<div class="gallery-tools">
+		<p ng-if="images.length > 1">Swipe or click through: {{currentIndex+1}} of {{images.length}}</p>
+<!-- 			<h4 ng-hide="galleryExpanded"ng-click="toggleGallery()"><i class="fa fa-expand"></i></h4>
+			<h4 ng-show="galleryExpanded"ng-click="toggleGallery()"><i class="fa fa-compress"></i></h4> -->
+		</div>
+	</div>
+
+	<div class="project-copy" ng-style="copyStyle">
+		<h2>{{projectLoaded.name}}</h2>
+		<p id="client">{{projectLoaded.client}}</p>
+
+		<p class="tag-container"><i class="fa fa-tags"></i> <span ng-repeat="tag in projectLoaded.tags" class="tag">{{tag.name}}</span></p>
+		<br/><br/>
+		<p class="description" ng-bind-html="toTrusted(projectLoaded.description)"></p>
+		<p class="description" ng-if="!projectLoaded.description">{{projectLoaded.synopsis}}</p>
+
+	</div>
+
+</div>
+
+<!-- <div ng-include=" 'global-footer.html' "></div> -->
